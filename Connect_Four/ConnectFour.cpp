@@ -28,6 +28,7 @@ bool ConnectFour::Update()
 
 bool ConnectFour::PlacePiece(int col)
 {
+	if(m_Columns[col].PlaceToken(m_ActiveToken))
 	{
 		
 	}
