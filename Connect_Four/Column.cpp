@@ -11,18 +11,16 @@ Column::Column(int height)
 {
 	m_Height = height;
 	m_Cells = new Cell[7];
-	m_LastOccupied = 0;
+	m_LastOccupied = 0;      
 }
-
+ 
 bool Column::PlaceToken(char token)
 {
-
 	if(IsFull() == false)
 	{
 		m_Cells[m_LastOccupied].m_Token = token;
 		m_LastOccupied++;
 	}
-
 	return false;
 }
 

@@ -7,10 +7,9 @@
 
 int main()
 {
-	ConnectFour *myFour = new ConnectFour;
+	ConnectFour *myFour = new ConnectFour(7,6);
 
 	myFour->Update();
-	myFour->Draw();
 
 	system("pause");
 }

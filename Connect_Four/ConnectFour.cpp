@@ -17,7 +17,8 @@ bool ConnectFour::Update()
 {
 	Draw();
 	int col;
-	cout << "Player " << m_ActiveToken << ": Choose a column";
+
+	cout << "Player " << m_ActiveToken << ": Choose a column \n";
 	cin >> col;
 	PlacePiece(col - 1);
 	m_ActiveToken == 88 ? m_ActiveToken = 79 : m_ActiveToken = 88;
@@ -27,7 +28,9 @@ bool ConnectFour::Update()
 
 bool ConnectFour::PlacePiece(int col)
 {
-	m_Columns[col].PlaceToken(m_ActiveToken);
+	{
+		
+	}
 	return false;
 }
 
@@ -54,13 +57,13 @@ bool ConnectFour::CheckVictory()
 
 void ConnectFour::Draw()
 {
-	system("cls");
+
 	for (int i = m_ColHeights; i > 0; i--)
 	{
-		for (int j = 0; j > m_NumCols; j++)
+		for (int j = 0; j < m_NumCols; j++)
 		{
-			cout << " | " << m_Columns[j].m_Cells  <<" | ";
-			cout << endl;
+			cout << "|" << m_Columns[i].m_Cells[j].m_Token  <<"|";
 		}
+		cout << endl;
 	}
 }
