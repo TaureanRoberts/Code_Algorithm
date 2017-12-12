@@ -4,14 +4,14 @@ Column::Column()
 {
 	m_Height = 7;
 	m_Cells = new Cell[7];
-	m_LastOccupied = NULL;
+	m_LastOccupied = 0;
 }
 
 Column::Column(int height)
 {
 	m_Height = height;
 	m_Cells = new Cell[7];
-	m_LastOccupied = NULL;
+	m_LastOccupied = 0;
 }
 
 bool Column::PlaceToken(char token)

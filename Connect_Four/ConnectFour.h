@@ -1,5 +1,8 @@
 #pragma once
 #include "Column.h"
+#include <iostream>
+
+using namespace std;
 
 class ConnectFour
 {
@@ -13,4 +16,5 @@ public:
 	bool Update();
 	bool PlacePiece(int col);
 	bool CheckVictory();
+	void Draw();
 };
