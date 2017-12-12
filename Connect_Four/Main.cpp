@@ -7,10 +7,10 @@
 
 int main()
 {
-	Cell *myCell = new Cell;
-	Column *myCol = new Column;
 	ConnectFour *myFour = new ConnectFour;
 
+	myFour->Update();
+	myFour->Draw();
 
 	system("pause");
 }

@@ -15,8 +15,8 @@ ConnectFour::ConnectFour()
 
 bool ConnectFour::Update()
 {
-	int col;
 	Draw();
+	int col;
 	cout << "Player " << m_ActiveToken << ": Choose a column";
 	cin >> col;
 	PlacePiece(col - 1);
@@ -59,7 +59,8 @@ void ConnectFour::Draw()
 	{
 		for (int j = 0; j > m_NumCols; j++)
 		{
-			cout << " | " << m_Columns[j].m_Cells  <<" | " << endl;
+			cout << " | " << m_Columns[j].m_Cells  <<" | ";
+			cout << endl;
 		}
 	}
 }
