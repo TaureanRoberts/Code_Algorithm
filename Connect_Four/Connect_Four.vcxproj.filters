@@ -21,7 +21,7 @@
     <ClInclude Include="Column.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Connect_Four.h">
+    <ClInclude Include="ConnectFour.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -35,7 +35,7 @@
     <ClCompile Include="Column.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Connect_Four.cpp">
+    <ClCompile Include="ConnectFour.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

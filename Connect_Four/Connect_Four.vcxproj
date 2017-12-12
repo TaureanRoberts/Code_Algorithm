@@ -112,12 +112,12 @@
   <ItemGroup>
     <ClInclude Include="Cell.h" />
     <ClInclude Include="Column.h" />
-    <ClInclude Include="Connect_Four.h" />
+    <ClInclude Include="ConnectFour.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Cell.cpp" />
     <ClCompile Include="Column.cpp" />
-    <ClCompile Include="Connect_Four.cpp" />
+    <ClCompile Include="ConnectFour.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
