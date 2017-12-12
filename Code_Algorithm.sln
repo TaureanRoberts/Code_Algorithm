@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Algorithm", "Algorithm\Algo
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Connect_Four", "Connect_Four\Connect_Four.vcxproj", "{05DA7EF1-4300-4FB0-AB2A-01A642E86227}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Traffic_Light", "Traffic_Light\Traffic_Light.vcxproj", "{65A3DAFD-604F-49F8-ACF6-E250FD04EDB0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{05DA7EF1-4300-4FB0-AB2A-01A642E86227}.Release|x64.Build.0 = Release|x64
 		{05DA7EF1-4300-4FB0-AB2A-01A642E86227}.Release|x86.ActiveCfg = Release|Win32
 		{05DA7EF1-4300-4FB0-AB2A-01A642E86227}.Release|x86.Build.0 = Release|Win32
+		{65A3DAFD-604F-49F8-ACF6-E250FD04EDB0}.Debug|x64.ActiveCfg = Debug|x64
+		{65A3DAFD-604F-49F8-ACF6-E250FD04EDB0}.Debug|x64.Build.0 = Debug|x64
+		{65A3DAFD-604F-49F8-ACF6-E250FD04EDB0}.Debug|x86.ActiveCfg = Debug|Win32
+		{65A3DAFD-604F-49F8-ACF6-E250FD04EDB0}.Debug|x86.Build.0 = Debug|Win32
+		{65A3DAFD-604F-49F8-ACF6-E250FD04EDB0}.Release|x64.ActiveCfg = Release|x64
+		{65A3DAFD-604F-49F8-ACF6-E250FD04EDB0}.Release|x64.Build.0 = Release|x64
+		{65A3DAFD-604F-49F8-ACF6-E250FD04EDB0}.Release|x86.ActiveCfg = Release|Win32
+		{65A3DAFD-604F-49F8-ACF6-E250FD04EDB0}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

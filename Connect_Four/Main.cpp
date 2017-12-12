@@ -11,8 +11,6 @@ int main()
 	Column *myCol = new Column;
 	ConnectFour *myFour = new ConnectFour;
 
-	myCol->PlaceToken();
-
 
 	system("pause");
 }

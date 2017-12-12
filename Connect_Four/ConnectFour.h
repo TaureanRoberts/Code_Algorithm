@@ -5,7 +5,7 @@ class ConnectFour
 {
 public:
 	Column *m_Columns;
-	char *m_ActiveToken;
+	char m_ActiveToken;
 	int m_NumCols;
 	int m_ColHeights;
 	ConnectFour(int numCols, int colHeight);

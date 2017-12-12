@@ -3,24 +3,24 @@
 Column::Column()
 {
 	m_Height = 7;
-	m_Cell = new Cell;
+	m_Cells = new Cell[7];
 	m_LastOccupied = NULL;
 }
 
 Column::Column(int height)
 {
 	m_Height = height;
+	m_Cells = new Cell[7];
+	m_LastOccupied = NULL;
 }
 
 bool Column::PlaceToken(char token)
 {
 
-	for (int i = 0; i < 6; i++)
+	if(IsFull() == false)
 	{
-		if (m_Height < m_LastOccupied)
-		{
-			m_Cell++;
-		}
+		m_Cells[m_LastOccupied].m_Token = token;
+		m_LastOccupied++;
 	}
 
 	return false;
@@ -30,7 +30,7 @@ bool Column::IsFull()
 {
 	if (m_LastOccupied == m_Height)
 	{
-		cout << "This Column is full \n";
+		return false;
 	}
-	return false;
+	return true;
 }
