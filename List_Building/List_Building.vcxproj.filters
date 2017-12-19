@@ -20,7 +20,13 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="LinkedList.h">
+    <ClInclude Include="ListType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ListIterator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NodeType.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

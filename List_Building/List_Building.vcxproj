@@ -110,7 +110,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="LinkedList.h" />
+    <ClInclude Include="ListIterator.h" />
+    <ClInclude Include="ListType.h" />
+    <ClInclude Include="NodeType.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp" />
