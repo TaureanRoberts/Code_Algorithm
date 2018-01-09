@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 #include "NodeType.h"
 #include "ListIterator.h"
 #include <future>
@@ -98,9 +99,14 @@ public:
 	//last points to the last node in the list, and count in incremented by 1
 	void InsertFirst(const Type &other)
 	{ 
-		NodeType<Type> *someFirst;
-		someFirst->info;
-
+		NodeType<Type> *someFirst = new NodeType<Type>;
+		someFirst->info = other;
+		someFirst->link = first;
+		first = someFirst;
+		if (count == 0)
+		{
+			last = first;
+		}
 	}
 
 	//Function to insert other at the end of the list

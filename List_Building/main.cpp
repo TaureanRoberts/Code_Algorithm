@@ -1,16 +1,14 @@
 #include <iostream>
-#include "assert.h"
-#include "ListIterator.h"
-#include "NodeType.h"
+#include  "ListType.h"
 
-template <class Type>
-int testing()
+//template <class Type>
+int main()
 {
+	/*LinkedListIterator<int> *testTypes = new LinkedListIterator<int>;
+	testTypes->*/
 
-	LinkedListIterator<int> *tests = new LinkedListIterator<int>; 
-	tests->
-
-
+	LinkedListType<int> *TestType = new LinkedListType<int>;
+	TestType->InsertFirst(154664);
 
 	system("pause");
 }
