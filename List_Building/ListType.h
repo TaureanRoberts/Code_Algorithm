@@ -107,6 +107,7 @@ public:
 		{
 			last = first;
 		}
+		count++;
 	}
 
 	//Function to insert other at the end of the list
@@ -114,8 +115,15 @@ public:
 	//last points to the last node in the list and count is incremented by 1
 	void InsertLast(const Type& other)
 	{
-		NodeType<Type> *someLast;
-		someLast->info;
+		NodeType<Type> *someLast = new NodeType<Type>;
+		someLast->info = other;
+		someLast->link = last;
+		last = someLast;
+		if (count == 0)
+		{
+			first = last;
+		}
+		count++;
 	}
 
 	//Function to delete other from the list
@@ -132,19 +140,21 @@ public:
 	LinkedListIterator<Type> Begin()
 	{
 		
+		return 0;
 	}
 
 	//Function to return an iterator at the end of the linked list
 	//PostCondition: Returns an iterator such current is set to NULL
 	LinkedListIterator<Type> End()
 	{
-		
+		return 0;
 	}
 
 	//Default Constructor
 	LinkedListType()
 	{
 		
+
 	}
 
 	//
@@ -162,5 +172,12 @@ public:
 private:
 	//Function to make a copy of other.
 	//PostCondition: A copy of other is created and assigned to this list
-	void CopyList(const LinkedListType<Type>&other);
+	void CopyList(const LinkedListType<Type>&other)
+	{
+		NodeType<Type> *someList = new NodeType<Type>;
+		first = someList;
+		someList->link = other;
+		
+		
+	}
 };
