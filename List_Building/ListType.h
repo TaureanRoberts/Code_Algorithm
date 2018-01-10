@@ -147,6 +147,7 @@ public:
 	//PostCondition: Returns an iterator such current is set to NULL
 	LinkedListIterator<Type> End()
 	{
+		
 		return 0;
 	}
 
@@ -167,7 +168,7 @@ public:
 	//Default Deconstructor
 	~LinkedListType()
 	{
-		
+		DestroyList();
 	}
 private:
 	//Function to make a copy of other.
@@ -175,7 +176,6 @@ private:
 	void CopyList(const LinkedListType<Type>&other)
 	{
 		NodeType<Type> *someList = new NodeType<Type>;
-		first = someList;
 		someList->link = other;
 		
 		
