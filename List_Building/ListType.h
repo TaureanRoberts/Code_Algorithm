@@ -42,16 +42,20 @@ public:
 	//PostCondition: node
 	void Print()
 	{
-
-
+		NodeType<Type> *temp;
+		temp = first;
+		for (int i = 0; i < count; i++)
+		{
+			std::cout << temp->info << std::endl;
+			temp = temp->link;
+		}
 	}
 
 	//Function to return the nodes in the list
 	//Postcondition: The value of count is returned
 	int Lenght()
 	{
-		
-		return 0;
+		return count;
 	}
 
 	//Function to return the nodes in the list
@@ -91,7 +95,17 @@ public:
 	bool Search(const Type& other) const
 	{
 
-		return true;
+		NodeType<Type> temp;
+		temp = first;
+		while (temp != NULL)
+		{
+			if (searchItem == temp.info)
+			{
+				return true;
+			}
+			temp = temp->link
+		}
+		return false;
 	}
 
 	//Function to insert other at the beginning of the list
@@ -132,37 +146,43 @@ public:
 	// is decremented by 1
 	void DeleteNode(const Type& other)
 	{
-		
+		delete other;
+		if (count > 0)
+		{
+			count -= 1;
+		}
 	}
 
 	//Function to return an iterator at the beginning of the linked list
 	//PostCondition: Returns an iterator such that current is set to first 
 	LinkedListIterator<Type> Begin()
 	{
-		
-		return 0;
+		LinkedListIterator<Type> *temp = new LinkedListIterator<Type>();
+		temp->current = first;
 	}
 
 	//Function to return an iterator at the end of the linked list
 	//PostCondition: Returns an iterator such current is set to NULL
 	LinkedListIterator<Type> End()
 	{
-		
-		return 0;
+		LinkedListIterator<Type> *temp = new LinkedListIterator<Type>();
+		temp->current = last;
 	}
 
 	//Default Constructor
 	LinkedListType()
 	{
-		
-
+		first = NULL;
+		last = NULL;
+		count = 0;
 	}
 
 	//
 	//Constructor that takes in an arguement that 
 	LinkedListType(const LinkedListType<Type>&other)
 	{
-		
+		InitializeList();
+		CopyList(other);
 	}
 
 	//Default Deconstructor
