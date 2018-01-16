@@ -22,16 +22,14 @@ public:
 	//Postcondition: Return the info contained in the node
 	Type operator*()
 	{
-		return current;
+		current->info;
 	}
 	//Overload the pre-increment the operator
 	//PostCondition: The itterator is advanced to the next node
 	LinkedListIterator<Type> operator++()
 	{
-		while (current != NULL)
-		{
-			current++;
-		}
+		current = current->link;
+		return *this;
 	}
 	//Overload the eqaulity operator
 	//Postconditon: Returns true if this iterator is equal to the iterator specified by

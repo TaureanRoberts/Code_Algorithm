@@ -3,6 +3,7 @@
 #include "NodeType.h"
 #include "ListIterator.h"
 #include <future>
+#include <assert.h>
 
 template<class Type>
 class LinkedListType
@@ -19,15 +20,14 @@ public:
 	//Overload the assignment operator
 	const LinkedListType<Type>& operator=(const LinkedListType<Type>& other)
 	{
-
-		
+		other.CopyList();
 	}
 
 	//Initialize the list to an empty state
 	//PostCondition: first = NULL, last = NULL, count = 0
 	void InitializeList()
 	{
-		
+		DestroyList();
 	}
 
 	//Function to determine whether the list is empty in the list PostCondition
@@ -77,7 +77,7 @@ public:
 	//PostCondition: If the list is empty , the program terminatese
 	Type Front()
 	{
-
+		assert(first != NULL);
 		return first->info;
 	}
 
@@ -87,6 +87,7 @@ public:
 	//the last element of the list is returned
 	Type Back()
 	{
+		assert(last != NULL);
 		return last->info;
 	}
 
@@ -103,7 +104,7 @@ public:
 			{
 				return true;
 			}
-			temp = temp->link
+			temp = temp->link;
 		}
 		return false;
 	}
