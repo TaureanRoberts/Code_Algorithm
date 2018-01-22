@@ -161,6 +161,7 @@ public:
 	{
 		LinkedListIterator<Type> *temp = new LinkedListIterator<Type>();
 		temp->current = first;
+		return first; 
 	}
 
 	//Function to return an iterator at the end of the linked list
@@ -169,6 +170,7 @@ public:
 	{
 		LinkedListIterator<Type> *temp = new LinkedListIterator<Type>();
 		temp->current = last;
+		return last;
 	}
 
 	//Default Constructor

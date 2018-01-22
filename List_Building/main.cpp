@@ -24,7 +24,7 @@ int main()
 	TestType = Testing;
 
 	TestType->Print();
-	Testing->Print();
+	//Testing->Print();
 
 	LinkedListType<int>test(*TestType);
 	
