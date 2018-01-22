@@ -20,7 +20,7 @@ public:
 	//Overload the assignment operator
 	const LinkedListType<Type>& operator =(const LinkedListType<Type>& other)
 	{
-		other.CopyList();
+		return other.CopyList();
 	}
 
 	//Initialize the list to an empty state
@@ -34,7 +34,6 @@ public:
 	//PostCondition: Returns true if the list is empty otherwise it returns false
 	bool IsEmptyList()
 	{
-
 		return true;
 	}
 
@@ -42,8 +41,9 @@ public:
 	//PostCondition: node
 	const void Print()
 	{
-		NodeType<Type> *temp;
+		NodeType<int> *temp = new NodeType<int>();
 		temp = first;
+		
 		for (int i = 0; i < count; i++)
 		{
 			cout << temp->info << endl;
@@ -69,7 +69,6 @@ public:
 			first = first->link;
 			delete temp;
 		}
-
 		count = 0;
 		last = NULL;
 	}
