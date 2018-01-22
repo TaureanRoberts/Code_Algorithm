@@ -2,9 +2,9 @@
 #include <iostream>
 #include "NodeType.h"
 #include "ListIterator.h"
-#include <future>
 #include <assert.h>
 
+using namespace std;
 template<class Type>
 class LinkedListType
 {
@@ -18,7 +18,7 @@ protected:
 
 public:
 	//Overload the assignment operator
-	const LinkedListType<Type>& operator=(const LinkedListType<Type>& other)
+	const LinkedListType<Type>& operator =(const LinkedListType<Type>& other)
 	{
 		other.CopyList();
 	}
@@ -40,13 +40,13 @@ public:
 
 	//Function to return the number of nodes in the list
 	//PostCondition: node
-	void Print()
+	const void Print()
 	{
 		NodeType<Type> *temp;
 		temp = first;
 		for (int i = 0; i < count; i++)
 		{
-			std::cout << temp->info << std::endl;
+			cout << temp->info << endl;
 			temp = temp->link;
 		}
 	}
@@ -102,7 +102,7 @@ public:
 		temp = first;
 		while (temp != NULL)
 		{
-			if (searchItem == temp.info)
+			if (other == temp.info)
 			{
 				return true;
 			}
@@ -198,18 +198,14 @@ private:
 	//PostCondition: A copy of other is created and assigned to this list
 	void CopyList(const LinkedListType<Type>&other)
 	{
-		NodeType<Type>*someNode = new NodeType<Type>();
-		NodeType<Type>*current = new NodeType<Type>();
-        first = someNode;
-		last = someNode;
-	    someNode = current;
-		current = other.first;
-		InsertFirst(current->info);
-		current = current->link;
-		while (current != NULL)
+		DestroyList();
+		NodeType<Type> *myNode = new NodeType<Type>;
+		myNode->info = other.first->info;
+		InsertFirst(myNode->info);
+		for(int i = 0; i < other.count-1; i++)
 		{
-			InsertLast(current->info);
-			current = current->link;
+			InsertLast(myNode->info);
+			myNode = myNode->link;
 		}
 	}
 };
