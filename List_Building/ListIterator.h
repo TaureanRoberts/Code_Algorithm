@@ -36,23 +36,14 @@ public:
 	//right otherwise it returns false
 	bool operator ==(const LinkedListIterator<Type>& other) const
 	{
-		if (current == other)
-		{
-			return true;
-		}
-
-		return false;
+		return current == right->current;
 	}
 	//Overload the not equals operator
 	//PostCondition: Return true if this iterator is not equal to the iterator specified by
 	//right otherwise it returns false.
 	bool operator !=(const LinkedListIterator<Type>& other) const
 	{
-		if(current != other)
-		{
-			return true;
-		}
-		return false;
+		return current != right->current;
 	}
 private:
 	//Pointer to point to the current node in the linked list

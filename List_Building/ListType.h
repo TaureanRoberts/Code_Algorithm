@@ -62,14 +62,16 @@ public:
 	//Post Condition: first = NULL, last = NULL, and count = 0
 	void DestroyList()
 	{
-		first = NULL;
-		last = NULL;
-		count = 0;
-		while (count != first)
+		NodeType<Type> *temp;
+		while (first != NULL)
 		{
-			count++;
+			temp = first;
+			first = first->link;
+			delete temp;
 		}
-	
+
+		count = 0;
+		last = NULL;
 	}
 
 	//Function to return the first element of the list
@@ -196,9 +198,18 @@ private:
 	//PostCondition: A copy of other is created and assigned to this list
 	void CopyList(const LinkedListType<Type>&other)
 	{
-		NodeType<Type> *someList = new NodeType<Type>;
-		someList->link = other;
-		
-		
+		NodeType<Type>*someNode = new NodeType<Type>();
+		NodeType<Type>*current = new NodeType<Type>();
+        first = someNode;
+		last = someNode;
+	    someNode = current;
+		current = other.first;
+		InsertFirst(current->info);
+		current = current->link;
+		while (current != NULL)
+		{
+			InsertLast(current->info);
+			current = current->link;
+		}
 	}
 };
