@@ -1,6 +1,6 @@
 #pragma once
-#include <exception>
 #include "NodeType.h"
+#
 
 template<class Type>
 class LinkedListIterator

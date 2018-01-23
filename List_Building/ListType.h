@@ -43,10 +43,10 @@ public:
 	{
 		NodeType<Type> *showMe;
 		showMe = first;
-		for (int i = 0; i < count; i++)
+		for (int i = 0; i < showMe->link; i++)
 		{
 			cout << showMe->info << endl;
-			showMe = showMe->link;
+			//showMe = showMe->link;
 		}
 	}
 

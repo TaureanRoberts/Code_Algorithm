@@ -1,10 +1,8 @@
 #include <iostream>
 #include  "ListType.h"
 
-//template <class Type>
 int main()
 {
-
 	LinkedListType<int> *TestType = new LinkedListType<int>();
 	LinkedListType<int> *Testing = new LinkedListType<int>();
 	TestType->InitializeList();
