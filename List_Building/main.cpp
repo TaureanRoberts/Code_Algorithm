@@ -14,18 +14,19 @@ int main()
 	TestType->InsertFirst(3);
 	TestType->InsertFirst(4);
 
-	TestType->InsertLast(1);
-	TestType->InsertLast(2);
-	TestType->InsertLast(3);
-	TestType->InsertLast(4);
+	TestType->InsertLast(5);
+	TestType->InsertLast(6);
+	TestType->InsertLast(7);
+	TestType->InsertLast(8);
 	
 	Testing->InsertFirst(1);
 	Testing->InsertLast(22);
-	TestType = Testing;
+	
 
 	TestType->Print();
-	//Testing->Print();
+	Testing->Print();
 
 	LinkedListType<int>test(*TestType);
 	
+	system("pause");
 }

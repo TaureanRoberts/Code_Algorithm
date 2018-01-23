@@ -39,15 +39,14 @@ public:
 
 	//Function to return the number of nodes in the list
 	//PostCondition: node
-	const void Print()
+	void Print()
 	{
-		NodeType<int> *temp = new NodeType<int>();
-		temp = first;
-		
+		NodeType<Type> *showMe = new NodeType<Type>;
+		showMe = first;
 		for (int i = 0; i < count; i++)
 		{
-			cout << temp->info << endl;
-			temp = temp->link;
+			cout << showMe->info << endl;
+			showMe = showMe->link;
 		}
 	}
 
@@ -79,7 +78,7 @@ public:
 	Type Front()
 	{
 		assert(first != NULL);
-		return first->info;
+		return first;
 	}
 
 	//Function to return the last element of the list
@@ -96,7 +95,6 @@ public:
 	//PostCondition: Returns true if other is in the list, otherwise the value false is returned
 	bool Search(const Type& other) const
 	{
-
 		NodeType<Type> temp;
 		temp = first;
 		while (temp != NULL)
