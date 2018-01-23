@@ -2,7 +2,7 @@
 #include <iostream>
 #include "NodeType.h"
 #include "ListIterator.h"
-#include <assert.h>
+#include <cassert>
 
 using namespace std;
 template<class Type>
@@ -39,9 +39,9 @@ public:
 
 	//Function to return the number of nodes in the list
 	//PostCondition: node
-	void Print()
+	const void Print()
 	{
-		NodeType<Type> *showMe = new NodeType<Type>;
+		NodeType<Type> *showMe;
 		showMe = first;
 		for (int i = 0; i < count; i++)
 		{
@@ -52,7 +52,7 @@ public:
 
 	//Function to return the nodes in the list
 	//Postcondition: The value of count is returned
-	int Lenght()
+	int Length()
 	{
 		return count;
 	}
@@ -93,7 +93,7 @@ public:
 
 	//Function to determine whether other is in the list
 	//PostCondition: Returns true if other is in the list, otherwise the value false is returned
-	bool Search(const Type& other) const
+	const bool Search(const Type& other)
 	{
 		NodeType<Type> temp;
 		temp = first;
@@ -131,7 +131,7 @@ public:
 	{
 		NodeType<Type> *someLast = new NodeType<Type>;
 		someLast->info = other;
-		someLast->link = last;
+		//someLast->link = first;
 		last = someLast;
 		if (count == 0)
 		{

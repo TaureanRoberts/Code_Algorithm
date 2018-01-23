@@ -21,7 +21,7 @@ int main()
 	
 	Testing->InsertFirst(1);
 	Testing->InsertLast(22);
-	
+	TestType = Testing;
 
 	TestType->Print();
 	Testing->Print();
