@@ -113,6 +113,9 @@ public:
 		return last->info;
 	}
 
+	//
+	//
+	//
 	//Function to determine whether other is in the list
 	//PostCondition: Returns true if other is in the list, otherwise the value false is returned
 	const bool Search(const Type& other)
