@@ -5,6 +5,8 @@
 template<class Type>
 class LinkedListIterator
 {
+	//Pointer to point to the current node in the linked list
+	NodeType<Type> *current;
 public:
 	//Default Constructor
 	//Postcondition: current = null
@@ -45,7 +47,4 @@ public:
 	{
 		return current != right->current;
 	}
-private:
-	//Pointer to point to the current node in the linked list
-	NodeType<Type> *current;
 };
