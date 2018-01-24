@@ -46,7 +46,7 @@ public:
 		for (int i = 0; i < count; i++)
 		{
 			cout << showMe->info << endl;
-			//showMe = showMe->link;
+			showMe = showMe->link;
 		}
 	}
 
