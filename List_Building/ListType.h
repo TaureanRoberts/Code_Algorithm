@@ -18,11 +18,17 @@ protected:
 
 public:
 	//Overload the assignment operator
+	//
+	//
+	//
+	//
 	const LinkedListType<Type>& operator =(const LinkedListType<Type>& other)
 	{
 		return other.CopyList();
 	}
-
+	//
+	//
+	//
 	//Initialize the list to an empty state
 	//PostCondition: first = NULL, last = NULL, count = 0
 	void InitializeList()
@@ -30,6 +36,9 @@ public:
 		DestroyList();
 	}
 
+	//
+	//
+	//
 	//Function to determine whether the list is empty in the list PostCondition
 	//PostCondition: Returns true if the list is empty otherwise it returns false
 	bool IsEmptyList()
@@ -37,6 +46,9 @@ public:
 		return true;
 	}
 
+	//
+	//
+	//
 	//Function to return the number of nodes in the list
 	//PostCondition: node
 	const void Print()
@@ -50,6 +62,9 @@ public:
 		}
 	}
 
+	//
+	//
+	//
 	//Function to return the nodes in the list
 	//Postcondition: The value of count is returned
 	int Length()
@@ -57,6 +72,9 @@ public:
 		return count;
 	}
 
+	//
+	//
+	//
 	//Function to return the nodes in the list
 	//Post Condition: first = NULL, last = NULL, and count = 0
 	void DestroyList()
@@ -72,6 +90,8 @@ public:
 		count = 0;
 	}
 
+	//
+	//
 	//Function to return the first element of the list
 	//Precondition: The list must exist and must not be empty
 	//PostCondition: If the list is empty , the program terminatese
@@ -81,6 +101,8 @@ public:
 		return first;
 	}
 
+	//
+	//
 	//Function to return the last element of the list
 	//Precondition: The list must exist and not be empty. 
 	//PostCondition:if the list is empty, the program terminates; otherwise,
