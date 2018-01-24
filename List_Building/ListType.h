@@ -43,7 +43,7 @@ public:
 	{
 		NodeType<Type> *showMe;
 		showMe = first;
-		for (int i = 0; i < showMe->link; i++)
+		for (int i = 0; i < count; i++)
 		{
 			cout << showMe->info << endl;
 			//showMe = showMe->link;
@@ -62,14 +62,14 @@ public:
 	void DestroyList()
 	{
 		NodeType<Type> *temp;
-		while (first != NULL)
+		for (int i = 0; i>count; i++)
 		{
 			temp = first;
 			first = first->link;
 			delete temp;
 		}
-		count = 0;
 		last = NULL;
+		count = 0;
 	}
 
 	//Function to return the first element of the list
@@ -131,12 +131,13 @@ public:
 	{
 		NodeType<Type> *someLast = new NodeType<Type>;
 		someLast->info = other;
-		//someLast->link = first;
-		last = someLast;
-		if (count == 0)
+		if (count != 0)
 		{
-			first = last;
+			last->link = someLast;
 		}
+		else
+			first = last;
+		last = someLast;
 		count++;
 	}
 
