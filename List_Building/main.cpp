@@ -3,6 +3,7 @@
 
 int main()
 {
+
 	LinkedListType<int> *TestType = new LinkedListType<int>();
 	LinkedListType<int> *Testing = new LinkedListType<int>();
 	TestType->InitializeList();
