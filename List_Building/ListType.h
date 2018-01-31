@@ -43,7 +43,11 @@ public:
 	//PostCondition: Returns true if the list is empty otherwise it returns false
 	bool IsEmptyList()
 	{
-		return true;
+		if (first == NULL || first == 0)
+		{
+			return true;
+		}
+		return false;
 	}
 
 	//
