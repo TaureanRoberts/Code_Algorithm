@@ -26,7 +26,8 @@ int main()
 	LinkedListIterator<int> *someA = new LinkedListIterator<int>();
 	LinkedListIterator<int> *someB = new LinkedListIterator<int>();
 
-	assert(TestType->Search(45) == true);
-	assert(TestType->Search(14) == true);
+	/*assert(TestType->Search(45) == true);
+	assert(TestType->Search(14) == true);*/
 
+	system("pause");
 }
