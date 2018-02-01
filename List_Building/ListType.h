@@ -122,16 +122,13 @@ public:
 	//
 	//Function to determine whether other is in the list
 	//PostCondition: Returns true if other is in the list, otherwise the value false is returned
-	const bool Search(const Type& other)
+	bool Search(const Type& other)
 	{
-		NodeType<Type> temp;
-		temp = first;
-		while (temp != NULL)
+		NodeType<Type> *temp = first;
+		for (int i = 0; i<count; i++)
 		{
-			if (other == temp.info)
-			{
+			if (other == temp->info)
 				return true;
-			}
 			temp = temp->link;
 		}
 		return false;
@@ -176,29 +173,35 @@ public:
 	// is decremented by 1
 	void DeleteNode(const Type& other)
 	{
-		delete other;
-		if (count > 0)
+		assert(Search(other) == true);
+		NodeType<Type> *newNode = new NodeType<Type>;
+		NodeType<Type> *newNode2 = new NodeType<Type>;
+		newNode = first;
+		if (newNode->link->info == other)
 		{
-			count -= 1;
+			newNode2 = newNode->link;
+			newNode->link = newNode2->link;
+			delete newNode2;
 		}
+		else
+			newNode = newNode->link;
+		count -= 1;
 	}
 
 	//Function to return an iterator at the beginning of the linked list
 	//PostCondition: Returns an iterator such that current is set to first 
 	LinkedListIterator<Type> Begin()
 	{
-		LinkedListIterator<Type> *temp = new LinkedListIterator<Type>();
-		temp->current = first;
-		return first; 
+		LinkedListIterator<Type> *temp = new LinkedListIterator<Type>(first);
+		return *temp;
 	}
 
 	//Function to return an iterator at the end of the linked list
 	//PostCondition: Returns an iterator such current is set to NULL
 	LinkedListIterator<Type> End()
 	{
-		LinkedListIterator<Type> *temp = new LinkedListIterator<Type>();
-		temp->current = last;
-		return last;
+		LinkedListIterator<Type> *temp = new LinkedListIterator<Type>(last);
+		return *temp;
 	}
 
 	//Default Constructor

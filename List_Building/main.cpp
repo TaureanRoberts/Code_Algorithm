@@ -4,30 +4,32 @@
 
 int main()
 {
-
-	LinkedListType<int> *TestType = new LinkedListType<int>();
-	LinkedListType<int> *Testing = new LinkedListType<int>();
-	TestType->InitializeList();
-
-	TestType->InsertFirst(1);
-	TestType->InsertFirst(45);
-
-	TestType->InsertLast(5);
-	TestType->InsertLast(14);
-
-	Testing->InsertFirst(1);
-	Testing->InsertLast(22);
-	TestType = Testing;
-
-	TestType->Print();
-
-	LinkedListType<int>test(*TestType);
+	LinkedListType<int> *test = new LinkedListType<int>;
+	LinkedListType<int> *test2 = new LinkedListType<int>;
 	
-	LinkedListIterator<int> *someA = new LinkedListIterator<int>();
-	LinkedListIterator<int> *someB = new LinkedListIterator<int>();
+	test->InitializeList();
 
-	/*assert(TestType->Search(45) == true);
-	assert(TestType->Search(14) == true);*/
+	test->InsertFirst(12);
+	test->InsertFirst(8);
+
+	test->InsertLast(39);
+	test->InsertLast(40);
+
+	test2->InsertFirst(1);
+	test2->InsertLast(22);
+
+	test->DeleteNode(12);
+
+	assert(test->Search(8) == true);
+	assert(test->Search(12) == false);
+
+	test = test2;
+	test->Print();
+
+	test->Begin();
+	test->End();
+
+	LinkedListType<int>test3(*test);
 
 	system("pause");
 }
